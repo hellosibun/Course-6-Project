@@ -61,9 +61,10 @@ form {
 }
 
 input {
-  padding: 10px;
-  outline: none;
-  font-family: Abel;
+    background-color: #e9ecef;
+    padding: 10px;
+    outline: none;
+    font-family: Abel;
 }
 
 .label-text {
@@ -102,7 +103,7 @@ input {
     cursor: pointer;
     font-family: Abel;
   }
-  .signup-btn {
+.signin-btn {
     background-color: green;
     padding: 10px;
     border: none;
@@ -110,5 +111,10 @@ input {
     font-size: 16px;
     margin-top: 20px;
     cursor: pointer;
+    font-family: Abel;
+  }
+
+  
+.bottom-banner{
     font-family: Abel;
   }
