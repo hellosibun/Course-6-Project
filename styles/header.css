@@ -1,0 +1,37 @@
+.header {
+    display:flex;
+    flex-direction: row;
+    justify-content:space-between;
+    margin:10px;
+}
+
+.titleBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.title {
+    font-family: 'Montez', cursive; 
+    font-size: 30px;
+    color: blue;
+    margin: 0;
+}
+
+.subTitle {
+    font-family:Ubuntu Mono;
+    font-size: 10;
+    color: black;
+    margin: 0;
+}
+
+.blueBox {
+    background-color: blue;
+    font-family: 'Ubuntu Condensed';
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-right: 5px;
+    padding-left: 5px;
+    color: white;
+    font-size: 14px;
+  }
