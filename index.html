@@ -24,7 +24,7 @@
             </div>
 
             <div class='login_btn_box'>
-                <button type="button" class="blueBox">Sign Up</button>
+                <button type="button" class="blueBox" onclick="showSignUpModal();">Sign Up</button>
                 <button type="button" class="blueBox">Sign In</button>
             </div>
         </div>
@@ -35,6 +35,36 @@
         </div>
 
     </div>
+
+    <!--MODALs-->
+
+    <div>
+        <!--SignUp Modal-->
+        <div class="modal" id="signup-modal">
+            <div class="modal-content">
+                <div class="modal-head">
+                    <span onclick="hideSignUpModal()" id="close" class="close">&times;</span>
+                    <h2 class="modal-title">Get Started</h2>
+                </div>
+                <hr>
+                <form>
+                    <label for="fullname" class="label-text">Name</label>
+                    <input type="text" id="fullname" placeholder="Enter your Name" required>
+                    <label for="username" class="label-text">Username</label>
+                    <input type="text" id="username" placeholder="Enter your username" required>
+                    <label for="password" class="label-text">Password</label>
+                    <input type="password" id="password" placeholder="Enter your password" required>
+                    <label for="confirmpassword" class="label-text">Confirm Password</label>
+                    <input type="password" id="confirm_password" placeholder="Re-enter password" required>
+                    <button type="submit" onclick="signup(firstName,lastName, email, password, mobile)" class="signup-btn">Sign up</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!--javascripts-->
+    <script src="scripts/header.js"></script>
+    <script src="scripts/index.js"></script>
 </body>
 
 </html>
