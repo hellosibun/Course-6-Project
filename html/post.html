@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="../styles/header.css" />
+    <!-- TODO: Include Font Awesome file here -->
+    <!-- TODO: Include Google Fonts file here -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montez|Roboto|Ubuntu+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+</head>
+
+<body>
+    <div id="main-container">
+        <div class="header">
+            <div class="titleBox">
+                <p class="title">ScriBBler</p>
+                <p class="subTitle">Explore, Imagine, Create</p>
+            </div>
+
+            <div class='login_btn_box'>
+                <button type="button" class="blueBox" onclick="showSignUpModal();">Sign Up</button>
+                <button type="button" class="blueBox" onclick="showSignInModal();">Sign In</button>
+            </div>
+        </div>
+    </div>
+    <!--MODALs-->
+
+    <div>
+        <!-- Insert code for Sign In modal here -->
+        <div class="modal" id="signin-modal">
+            <div class="modal-content">
+
+                <div class="modal-head">
+                    <span onclick="hideSignInModal()" id="close" class="close">&times;</span>
+                    <h2 class="modal-title">Welcome Back!</h2>
+                </div>
+                <hr>
+                <form>
+                    <label for="username" class="label-text">Username</label>
+                    <input type="text" id="username" placeholder="Enter Username" required>
+                    <label for="password" class="label-text">Password</label>
+                    <input type="password" id="password" placeholder="Enter Password" required>
+                    <button type="submit" onclick="signin(username, password)" class="signin-btn">Sign In</button>
+                </form>
+
+                <p class=bottom-banner>Not a member?<span onclick="hideSignInModal();showSignUpModal()"
+                        class=signup>Sign
+                        Up</span></p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Insert code for Sign Up modal here -->
+    <div>
+        <div class="modal" id="signup-modal">
+            <div class="modal-content">
+
+                <div class="modal-head">
+                    <span onclick="hideSignUpModal()" id="close" class="close">&times;</span>
+                    <h2 class="modal-title">Get Started</h2>
+                </div>
+                <hr>
+                <form>
+                    <label for="fullname" class="label-text">Name</label>
+                    <input type="text" id="fullname" placeholder="Enter Full Name" required>
+                    <label for="username" class="label-text">Username</label>
+                    <input type="text" id="username" placeholder="Enter Username" required>
+                    <label for="password" class="label-text">Password</label>
+                    <input type="password" id="password" placeholder="Enter Password" required>
+                    <label for="confirmpassword" class="label-text">Confirm Password</label>
+                    <input type="password" id="confirm_password" placeholder="Confirm Password" required>
+                    <button type="submit" onclick="signup(firstName,lastName, email, password, mobile)"
+                        class="signin-btn">Sign
+                        up</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="post container">
+        <div class="heading-content" id="edit-heading" contenteditable="true"></div>
+        <div class="author">
+            <div class="author-name"></div>
+            <div>
+                <button id="edit-button" type="button" class="btn btn-danger" onclick="onEdit()">Edit<i
+                        class="fa fa-edit" style="padding-left: 5px;"></i></button>
+            </div>
+        </div>
+
+
+        <div class="post-content" id="edit-contenttext" contenteditable="true">
+        </div>
+
+        <button id="like-button" type="button" class="btn btn-danger" onclick="countLikes()"><i
+                class="fa fa-thumbs-up"></i><span id="likeButton">Like</span></button>
+        <div id="showCount">Be the first one to like this</div>
+
+        <textarea id="comment" rows="4" cols="135" placeholder="Leave a comment..." name="comment"></textarea>
+        <div><button id="comment-button" type="button" class="btn btn-danger"
+                onclick="addComment(comment)">Comment</button></div>
+        <div id="allCommentsHeading">All Comments</div>
+        <div class="comment-container">
+            <div id="comments">
+            </div>
+        </div>
+
+    </div>
+
+    <!--javascripts-->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script src=../scripts/post.js> </script>
+    <script src="../scripts/header.js"></script>
+
+</body>
+
+</html>
