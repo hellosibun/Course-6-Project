@@ -3,6 +3,7 @@
 
 <head>
     <link rel="stylesheet" href="../styles/header.css" />
+    <link rel="stylesheet" href="../styles/post.css" />
     <!-- TODO: Include Font Awesome file here -->
     <!-- TODO: Include Google Fonts file here -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
@@ -75,14 +76,14 @@
                     <label for="confirmpassword" class="label-text">Confirm Password</label>
                     <input type="password" id="confirm_password" placeholder="Confirm Password" required>
                     <button type="submit" onclick="signup(firstName,lastName, email, password, mobile)"
-                        class="signin-btn">Sign
-                        up</button>
+                        class="signin-btn">Sign Up</button>
                 </form>
             </div>
         </div>
     </div>
 
     <div class="post container">
+        
         <div class="heading-content" id="edit-heading" contenteditable="true"></div>
         <div class="author">
             <div class="author-name"></div>
@@ -92,22 +93,21 @@
             </div>
         </div>
 
-
-        <div class="post-content" id="edit-contenttext" contenteditable="true">
-        </div>
-
-        <button id="like-button" type="button" class="btn btn-danger" onclick="countLikes()"><i
-                class="fa fa-thumbs-up"></i><span id="likeButton">Like</span></button>
+        <div class="post-content" id="edit-contenttext" contenteditable="true"></div>
+        
+        <!--like button-->
+        <button id="like-button" type="button" class="btn btn-danger" onclick="countLikes()"><i class="fa fa-thumbs-up"></i> <span id="likeButton">Like</span> </button>
         <div id="showCount">Be the first one to like this</div>
 
+        <!--comments-->
         <textarea id="comment" rows="4" cols="135" placeholder="Leave a comment..." name="comment"></textarea>
         <div><button id="comment-button" type="button" class="btn btn-danger"
-                onclick="addComment(comment)">Comment</button></div>
+            onclick="addComment(comment)">Comment</button></div>
         <div id="allCommentsHeading">All Comments</div>
         <div class="comment-container">
             <div id="comments">
             </div>
-        </div>
+        </div>    
 
     </div>
 
