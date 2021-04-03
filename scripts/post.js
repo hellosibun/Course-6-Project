@@ -1,10 +1,12 @@
 const queryString = new Array();
-let editMode = false;
-let num = 0;
+var editMode = false;
+var num = 0;
 
+
+// for edit button functionality
 function onEdit() {
         num += 1;
-        if (!editMode) {
+        if(!editMode) {
                 document.getElementById('edit-heading').style.borderWidth = '2px';
                 document.getElementById('edit-heading').style.borderStyle = 'solid';
                 document.getElementById('edit-heading').style.borderColor = 'red';
@@ -31,7 +33,8 @@ function onEdit() {
                 document.getElementById('edit-button').innerHTML =
                         'Edit<i class="fa fa-edit" style="padding-left: 4px;"></i>';
                 document.getElementById('edit-button').disabled = true;
-        }
+        }   
+        
 }
 
 window.onload = function() {
@@ -56,25 +59,28 @@ window.onload = function() {
         document.getElementById('comments').style.visibility = 'hidden';
 };
 
-let count = 0;
+
+var count = 0;
 function countLikes() {
-        count = parseInt(count) + parseInt(1);
+        count = parseInt(count)+ parseInt(1);
         const divData = document.getElementById('showCount');
         const likeButton = document.getElementById('likeButton');
-        likeButton.innerHTML = 'Liked';
+        likeButton.innerHTML = "Liked";
         if (count == 1) {
-                divData.innerHTML = `${count} person likes this !`;
-        } else {
-                divData.innerHTML = `${count} people like this !`;
+                divDataData.innerHTML = `${count} person likes this !`;
+        }else {
+                divData.innerHTML = `${count} people likes this !`;
         }
 }
 
+
+//comments
 const comments = [];
 
 function addingComment(item, index) {
         const temp = document.getElementById('comments').innerHTML;
         document.getElementById('comments').innerHTML = `<div class="comment">${item}</div>`;
-        // + `</br>`;
+        
         document.getElementById('comments').innerHTML += `${temp}</br>`;
         comments.pop();
 }
