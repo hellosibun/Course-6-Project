@@ -7,4 +7,5 @@ function openPost(author, heading, content) {
             author.innerText
     )}&content=${encodeURIComponent(content.innerText)}`;
     window.location.href = url;
+    console.log(url);
 }
